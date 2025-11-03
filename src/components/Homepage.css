@@ -1,0 +1,331 @@
+/* ==========================
+   Homepage Styles (Assets Path)
+========================== */
+
+.homepage {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0a0814; /* dark purple background */
+  color: #fff;
+  min-height: 90vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 6%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: #0a0814; /* optional: navbar background */
+}
+
+.logo {
+  height: 55px;
+  margin-left: -50px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 6%;
+  gap: 40px;
+  margin-top: 80px; /* navbar height */
+}
+
+/* Left Content */
+.hero-content {
+  flex: 1;
+  max-width: 500px;
+  margin-top: 40px;
+  margin-left: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.hero-content h1,
+.hero-content p,
+.how-it-works,
+.cta-btn {
+  margin-left: 0;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, #ff00cc, #7d2cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #bdbdbd;
+ width: 650px;
+  /* border: 2px solid white; */
+}
+
+.how-it-works {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 20px 0 15px;
+  cursor: pointer;
+}
+
+/* CTA Button */
+.cta-btn {
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #7d2cff, #b12cff);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Right Side - Phone Mockup */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-gif {
+  width: 60%;
+  height: 100%;
+  margin-left:40%;
+}
+
+/* Supported Platforms Section */
+.supported-platforms {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: #fff;
+  font-family: 'Segoe UI', 'Inter', sans-serif;
+  padding: 0 40px;
+  height: 70px;
+  border:0.1px solid  #2c0138;
+}
+
+.supported-platforms h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.platform-logos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+}
+
+.platform-logos img {
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.platform-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Navbar contact button */
+.contact-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #c72af2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 78%;
+  width: 10vw;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  background: linear-gradient(135deg, #a64dff, #d17be0);
+  transform: scale(1.05);
+}
+
+/* ========================== Responsive Design ========================== */
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin-top: 30px;
+  }
+
+  .cta-btn {
+    width: auto;
+  }
+
+  .contact-btn {
+    margin-left: auto;
+    width: 25%;
+  }
+
+  .supported-platforms {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .cta-btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contact-btn {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-image .phone-gif {
+    width: 80%;
+    height: auto;
+  }
+
+  .supported-platforms {
+    flex-direction: column;
+    height: auto;
+    padding: 15px 20px;
+    gap: 10px;
+  }
+
+  .platform-logos {
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .cta-btn {
+    width: 90%;
+  }
+
+  .contact-btn {
+    width: 50%;
+  }
+
+  .hero-image .phone-gif {
+    width: 100%;
+    height: auto;
+  }
+
+  .supported-platforms h2 {
+    font-size: 1.2rem;
+  }
+
+  .platform-logos img {
+    height: 25px;
+    gap: 10px;
+  }
+}
+/* Supported Platforms Section - Mobile Friendly */
+@media screen and (max-width: 768px) {
+  .supported-platforms {
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center content */
+    justify-content: center;
+    height: auto;           /* auto height for multiple rows */
+    padding: 20px 15px;     /* reduce side padding */
+    gap: 15px;              /* spacing between rows */
+  }
+
+  .supported-platforms h2 {
+    font-size: 1.3rem;      /* smaller heading */
+    text-align: center;     /* center text */
+  }
+
+  .platform-logos {
+    justify-content: center; /* center logos */
+    flex-wrap: wrap;         /* wrap logos if needed */
+    gap: 15px;               /* reduce gap between logos */
+  }
+
+  .platform-logos img {
+    height: 28px;           /* slightly smaller logos */
+    margin: 0;              /* remove extra margin */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .supported-platforms {
+    padding: 15px 10px;
+    gap: 12px;
+  }
+
+  .supported-platforms h2 {
+    font-size: 1.1rem;
+  }
+
+  .platform-logos img {
+    height: 24px;           /* smaller logos for small screens */
+  }
+}
+/* ---------------- Mobile Logo Adjustment ---------------- */
+@media screen and (max-width: 768px) {
+  .logo {
+    margin-left: 0;        /* remove left shift */
+    display: block;
+    margin-right: auto;    /* center horizontally if needed */
+    margin-left: auto;     /* center horizontally */
+    height: 50px;          /* optional: slightly smaller logo for mobile */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    height: 45px;          /* smaller logo for very small screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

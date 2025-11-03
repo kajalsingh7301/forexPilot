@@ -1,0 +1,90 @@
+.admin-wrapper {
+  padding: 20px;
+  background: #0b0f19; /* Dark background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  color: #e0e6f5; /* Light text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.contacts-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #121826; /* Darker table background */
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; /* fixes cell widths for responsiveness */
+}
+
+.contacts-table th,
+.contacts-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 14px;
+  word-break: break-word; /* ensures long text wraps */
+}
+
+.contacts-table th {
+  background: linear-gradient(90deg, #0052d4, #4364f7, #6fb1fc);
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contacts-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.contacts-table tr:hover {
+  background: rgba(0, 132, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.contacts-table td {
+  color: #cfd8f3;
+  overflow: hidden;
+  text-overflow: ellipsis; /* truncate if too long */
+  white-space: nowrap; /* default for desktop */
+}
+
+.error-msg {
+  color: #ff4c4c;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+/* ------------------ RESPONSIVE STYLES ------------------ */
+@media screen and (max-width: 768px) {
+  .contacts-table td,
+  .contacts-table th {
+    font-size: 12px;
+    padding: 8px 10px;
+    white-space: normal; /* allow wrap on mobile */
+  }
+
+  .admin-wrapper {
+    padding: 10px;
+  }
+
+  .contacts-table {
+    display: block;
+    overflow-x: auto; /* horizontal scroll if needed */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacts-table th {
+    font-size: 11px;
+  }
+
+  .contacts-table td {
+    font-size: 11px;
+    padding: 6px 8px;
+  }
+}
