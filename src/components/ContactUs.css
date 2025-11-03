@@ -1,0 +1,209 @@
+/* ================================ Contact Us Page - Dark Theme =============================== */
+
+/* Wrapper */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 100vh;
+  background: #0a0a0a;
+  padding: 40px;
+  font-family: "Segoe UI", sans-serif;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* ================= Left Side ================= */
+.contact-left {
+  flex: 1;
+  background: linear-gradient(135deg, #2d0f44, #1a082d, #000000);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+.contact-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(200, 0, 255, 0.6);
+}
+
+@keyframes floatImg {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ================= Right Side Form ================= */
+.contact-right {
+  flex: 1;
+  background: linear-gradient(135deg, #1a082d, #000000);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  color: #fff;
+}
+
+.contact-right h3 {
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(160, 32, 240, 0.5);
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-right label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #ddd;
+  text-align: left;
+  font-weight: 600;
+}
+
+.contact-right input,
+.contact-right textarea {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border: 1px solid rgba(160, 32, 240, 0.4);
+  border-radius: 12px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  backdrop-filter: blur(6px);
+}
+
+.contact-right input::placeholder,
+.contact-right textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+  border-color: #a020f0;
+  box-shadow: 0 0 12px rgba(160, 32, 240, 0.6);
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-right textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+/* ================= Button ================= */
+.contact-right button {
+  background: linear-gradient(135deg, #a020f0, #7a0fd6);
+  color: #fff;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.contact-right button:hover {
+  background: linear-gradient(135deg, #7a0fd6, #a020f0);
+  box-shadow: 0 6px 20px rgba(160, 32, 240, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ================= Image ================= */
+.img {
+  filter: drop-shadow(0 0 15px rgba(200, 0, 255, 0.6));
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+.imgclass {
+  height: 70vh;
+  width: 40vw;
+  margin-left: 30%;
+  margin-top: 5%;
+  object-fit: contain; /* ensures image scales correctly */
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    gap: 20px;
+    padding: 30px;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 30px;
+  }
+
+  .imgclass {
+    width: 50vw;
+    height: 60vh;
+    margin-left: 25%;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    margin: 0;
+  }
+
+  .imgclass {
+    width: 60vw;
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-left h2 {
+    font-size: 26px;
+  }
+
+  .contact-right h3 {
+    font-size: 22px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .contact-right button {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .imgclass {
+    width: 80vw;
+    height: 35vh;
+    margin-left: 50px;
+    margin-right: auto;
+    margin-top: 5%;
+  }
+}

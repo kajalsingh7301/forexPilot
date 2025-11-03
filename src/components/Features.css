@@ -1,0 +1,145 @@
+.features-container {
+  background: #f3edff;
+  padding: 50px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #5c00ff;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.features-header p {
+  font-size: 16px;
+  color: #3b0d8a;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: #4a0e9a;
+  line-height: 1.4;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media screen and (max-width: 1024px) {
+  .features-container {
+    padding: 40px 15px;
+  }
+
+  .features-header h2 {
+    font-size: 26px;
+  }
+
+  .features-header p {
+    font-size: 15px;
+  }
+
+  .features-grid {
+    gap: 25px;
+  }
+
+  .feature-card {
+    padding: 18px;
+  }
+
+  .feature-title {
+    font-size: 15px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .features-container {
+    padding: 35px 15px;
+  }
+
+  .features-header h2 {
+    font-size: 24px;
+  }
+
+  .features-header p {
+    font-size: 14px;
+  }
+
+  .feature-card {
+    padding: 15px;
+  }
+
+  .feature-title {
+    font-size: 14px;
+  }
+
+  .feature-desc {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .features-container {
+    padding: 30px 10px;
+  }
+
+  .features-header h2 {
+    font-size: 22px;
+  }
+
+  .features-header p {
+    font-size: 13px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+    gap: 20px;
+  }
+
+  .feature-card {
+    padding: 12px;
+  }
+
+  .feature-icon {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .feature-title {
+    font-size: 13px;
+  }
+
+  .feature-desc {
+    font-size: 12px;
+  }
+}
